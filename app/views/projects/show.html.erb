@@ -1,0 +1,16 @@
+<h1><%= @project.title %></h1>
+
+<p><%= @project.description %></p>
+
+<p><%= @project.created_at.strftime("%Y-%b-%d")%></p>
+
+<br>
+
+<%= link_to "Edit", edit_project_path(@project) %>
+
+<br>
+
+<%= button_to "Delete", @project, method: :delete, data: {confirm: "Are you sure? It's gone for good!"} %>
+<br>
+
+<%= link_to "All Projects", projects_path %>

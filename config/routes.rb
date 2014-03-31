@@ -1,8 +1,12 @@
 PmJf::Application.routes.draw do
 
-  get "/home" => "home#home"
+  root "projects#index"
 
-  get "/about" => "home#about"
+  resources :projects
+  
+  #get "/home" => "home#home"
+
+  #get "/about" => "home#about"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
