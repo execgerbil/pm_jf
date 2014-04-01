@@ -1,0 +1,19 @@
+<h1><%= @task.title %></h1>
+
+<p>Due date: <%= @task.due_date %></p>
+
+<p><%= @task.created_at.strftime("%Y-%b-%d")%></p>
+
+<br>
+
+<%= link_to "Edit", edit_task_path(@task) %>
+
+<br>
+
+<%= button_to "Delete", @task, method: :delete, data: {confirm: "Are you sure? It's gone for good!"} %>
+<br>
+
+<%= link_to "All Tasks", tasks_path %>
+<br>
+<%= link_to "Home", home_path%>
+<br>
