@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title PmJf:Welcome!
+    = stylesheet_link_tag    "external", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  #content
+    %body
+    .navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+      .container
+        .navbar-header
+          %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+           = link_to "Pm_Jf:Welcome!", home_path, class: "navbar-brand"
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              = link_to "Create New Project", new_project_path
+            %li
+              %a{:href => "#about"} 
+                About 
+                %span.greentext Me
+            %li
+              %a{:href => "#contact"} Contact
+        / /.nav-collapse
+    .container
+      = yield
+
+    #footer
+      .container
+        %p © Awesome Company 2014

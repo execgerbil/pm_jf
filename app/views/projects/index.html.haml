@@ -1,0 +1,11 @@
+%h1 All Projects
+= link_to "Create New Project", new_project_path
+- @projects.each do |project|
+  %h2= link_to project.title, project_path(project.id)
+  %p= project.description
+  %p
+    Created On: #{project.created_at.strftime("%Y-%b-%d")}
+  %hr
+%br
+  = link_to "Home", home_path
+  %br/

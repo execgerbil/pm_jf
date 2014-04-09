@@ -1,0 +1,12 @@
+%h1 All Tasks
+= link_to "Create New Task", new_task_path
+- @tasks.each do |task|
+  %h2= link_to task.title, task_path(task.id)
+  %p
+    Due Date: #{task.due_date}
+  %p
+    Created On: #{task.created_at.strftime("%Y-%b-%d")}
+  %hr
+%br
+  = link_to "Home", home_path
+  %br/

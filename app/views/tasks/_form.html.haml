@@ -1,0 +1,6 @@
+= form_for @task do |f|
+  = f.label :title, "Title *"
+  = f.text_field :title
+  = f.label :due_date, "Due Date"
+  = f.date_field :due_date
+  = f.submit_tag "Save Task"
